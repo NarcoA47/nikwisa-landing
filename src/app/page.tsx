@@ -1,101 +1,84 @@
-import Image from "next/image";
+"use client"
+import { useState } from 'react';
+import Head from 'next/head';
+import { Menu, X } from 'react-feather'; // Icons for the hamburger and close button
 
-export default function Home() {
+const Home: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen bg-gray-100 relative">
+      <Head>
+        <title>Join our waiting list</title>
+        <meta name="description" content="We craft custom homes" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      
+      {/* Header */}
+      <header className="flex justify-between items-center p-6 bg-white shadow-md z-10">
+        <div className="text-[#B88E2F] text-2xl font-bold">Nikwisa</div>
+        <nav className="hidden md:flex space-x-8">
+          <ul className="flex space-x-8">
+            <li><a href="#" className="text-gray-700 hover:text-black">Home</a></li>
+            <li><a href="#" className="text-gray-700 hover:text-black">About</a></li>
+            <li><a href="#" className="text-gray-700 hover:text-black">Contact</a></li>
+          </ul>
+        </nav>
+        <button className="px-6 py-2 bg-black text-white rounded hover:bg-gray-800 hidden md:block">
+          Waiting List
+        </button>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        {/* Hamburger Icon for Mobile */}
+        <div className="md:hidden">
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden">
+          <nav className="flex flex-col items-center bg-white shadow-md">
+            <ul className="flex flex-col space-y-4 p-6">
+              <li><a href="#" className="text-gray-700 hover:text-black">Home</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-black">About</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-black">Contact</a></li>
+            </ul>
+            <button className="px-6 py-2 bg-black text-white rounded hover:bg-gray-800 mb-4">
+              Waiting List
+            </button>
+          </nav>
+        </div>
+      )}
+
+      {/* Main Content with full screen background */}
+      <main className="relative min-h-screen bg-[url('/assets/1.jpg')] bg-cover bg-center text-white flex flex-col justify-center p-8">
+        {/* Left-aligned text */}
+        <div className="text-left space-y-6 z-10 max-w-xl">
+          <h1 className="text-5xl md:text-7xl font-bold">The perfect place to start looking</h1>
+          <p className="text-xl md:text-2xl">We provide you with the best service and products.</p>
+          <button className="mt-8 px-8 py-3 bg-black text-white rounded-lg hover:bg-gray-800">
+            Watch now
+          </button>
+        </div>
+
+        {/* Right banner (hidden on small screens) */}
+        <div className="hidden md:block absolute right-8 top-1/4 bg-[#B88E2F] bg-opacity-70 p-8 rounded-lg w-72 text-center z-10">
+          <h2 className="text-2xl font-semibold">Exclusive Offer</h2>
+          <p className="mt-4 text-gray-800">Get a personalized consultation now.</p>
+          <button className="mt-6 px-6 py-2 bg-black text-white rounded hover:bg-gray-800">
+            Learn More
+          </button>
+        </div>
+
+        {/* Bottom left banner */}
+        <div className="absolute bottom-8 left-8 bg-[#B88E2F] bg-opacity-70 p-6 rounded-lg w-72 text-left z-10">
+          <h3 className="text-xl font-semibold">Ready to make your dream home?</h3>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
-}
+};
+
+export default Home;
