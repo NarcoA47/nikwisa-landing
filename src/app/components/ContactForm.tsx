@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 interface FormData {
   name: string;
@@ -22,8 +23,26 @@ const ContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Form data:', formData);
-    // Handle form submission here
+
+    emailjs.send(
+      'service_0y8c73e', 
+      'template_h8nh1fv', 
+      {
+        from_name: formData.name,
+        reply_to: formData.email,
+        message: formData.message,
+      },
+      'rlbGH7t-UDCE0qL4A' 
+    )
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      alert('Message sent successfully!');
+      setFormData({ name: '', email: '', message: '' }); // Clear form after submission
+    })
+    .catch((error) => {
+      console.log('FAILED...', error);
+      alert('Failed to send the message. Please try again.');
+    });
   };
 
   return (
