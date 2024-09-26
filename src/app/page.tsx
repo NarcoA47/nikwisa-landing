@@ -23,17 +23,19 @@ const Home: React.FC = () => {
 
 
             <div className="flex flex-col">
+              
               <div className="flex flex-col md:flex-row md:justify-between">
-                <button className="mt-8 px-9 py-2 bg-[#B88E2F] text-white rounded-lg hover:bg-gray-800 w-full md:flex-1 md:mx-2">
+              
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjiExUv16wIlJQjGjZpU9qo8w75g6vql3VT95SIzjFNKscIA/viewform?usp=sf_link" className="mt-8 px-9 py-2 bg-[#B88E2F] text-white rounded-lg hover:bg-gray-800 w-full md:flex-1 md:mx-2">
                   Taskers - Sign Up Now
-                </button>
-                <button className="mt-8 px-9 py-2 bg-[#B88E2F] text-white rounded-lg hover:bg-gray-800 w-full md:flex-1 md:mx-2">
+                </a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXNOrVkqPQ85PIngi7Grsx3Z1M-Hgj6NgHQ6mVfhwzpfIxdw/viewform?usp=sf_link" className="mt-8 px-9 py-2 bg-[#B88E2F] text-white rounded-lg hover:bg-gray-800 w-full md:flex-1 md:mx-2">
                   Merchants - Join Us
-                </button>
+                </a>
               </div>
-              <button className="mt-8 px-9 py-2 bg-[#B88E2F] text-white rounded-lg hover:bg-gray-800 w-full md:w-auto md:mx-2">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjzeDgHSPxd5wApJkwFfujStSG16ZJSO_EQffaGU3BjFKTGA/viewform?usp=sf_link" className="mt-8 px-9 py-2 bg-[#B88E2F] text-white rounded-lg hover:bg-gray-800 w-full md:w-auto md:mx-2">
                 Customers - Explore Our Marketplace
-              </button>
+              </a>
             </div>
           </div>
 
