@@ -22,7 +22,7 @@ export default function Navigation() {
                 <nav className="hidden md:flex space-x-8">
                     <ul className="flex space-x-8">
                             <Link href="/">
-                                <li className="text-gray-700 hover:text-black">Home</li>
+                                <li className="text-gray-700  hover:text-black">Home</li>
                             </Link>
                             <Link href="/about">
                                 <li className="text-gray-700 hover:text-black">About</li>
@@ -33,7 +33,7 @@ export default function Navigation() {
                     </ul>
                     {/* Waiting List Button */}
                     <div className='flex justify-between'>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjzeDgHSPxd5wApJkwFfujStSG16ZJSO_EQffaGU3BjFKTGA/viewform?usp=sf_link" className=" px-6 py-2 bg-black text-white rounded hover:bg-gray-800 md:block">
+                    {/* <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjzeDgHSPxd5wApJkwFfujStSG16ZJSO_EQffaGU3BjFKTGA/viewform?usp=sf_link" className=" px-6 py-2 bg-black text-white rounded hover:bg-gray-800 md:block">
                         Taskers 
                     </a>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjiExUv16wIlJQjGjZpU9qo8w75g6vql3VT95SIzjFNKscIA/viewform?usp=sf_link" className="mx-6 px-2 py-2 bg-black text-white rounded hover:bg-gray-800 md:block">
@@ -41,7 +41,7 @@ export default function Navigation() {
                     </a>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjiExUv16wIlJQjGjZpU9qo8w75g6vql3VT95SIzjFNKscIA/viewform?usp=sf_link" className="px-6 py-2 bg-black text-white rounded hover:bg-gray-800 md:block">
                         Customers
-                    </a>
+                    </a> */}
                 </div> 
                 </nav>
                 
@@ -74,13 +74,13 @@ export default function Navigation() {
 
                                 {/* Waiting List Button */}
                                 <div className='flex flex-col'>
-                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjzeDgHSPxd5wApJkwFfujStSG16ZJSO_EQffaGU3BjFKTGA/viewform?usp=sf_link" className="my-4 px-6 py-2 bg-black text-white rounded hover:bg-gray-800 md:block">
+                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjzeDgHSPxd5wApJkwFfujStSG16ZJSO_EQffaGU3BjFKTGA/viewform?usp=sf_link" className="my-4 px-6 py-2 bg-[#B88E2F] text-white rounded hover:bg-[#f0ca73] md:block">
                                     Taskers 
                                     </a>
-                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjiExUv16wIlJQjGjZpU9qo8w75g6vql3VT95SIzjFNKscIA/viewform?usp=sf_link" className="px-6 py-2 bg-black text-white rounded hover:bg-gray-800 md:block">
+                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjiExUv16wIlJQjGjZpU9qo8w75g6vql3VT95SIzjFNKscIA/viewform?usp=sf_link" className="px-6 py-2 bg-[#B88E2F] text-white rounded hover:bg-[#f0ca73 md:block">
                                     Merchants
                                     </a>
-                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjiExUv16wIlJQjGjZpU9qo8w75g6vql3VT95SIzjFNKscIA/viewform?usp=sf_link" className="my-4 px-6 py-2 bg-black text-white rounded hover:bg-gray-800 md:block">
+                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjiExUv16wIlJQjGjZpU9qo8w75g6vql3VT95SIzjFNKscIA/viewform?usp=sf_link" className="my-4 px-6 py-2 bg-[#B88E2F] text-white rounded hover:bg-[#f0ca73 md:block">
                                     Customers
                                     </a>
                                 </div> 
