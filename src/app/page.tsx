@@ -1,9 +1,13 @@
-
+"use client"
+import React from 'react'
+import Navigation from './components/Navigation';
 
 const Home: React.FC = () => {
 
   return (
-      {/* Main Content with full screen background */}
+    
+      <div>
+      <Navigation/>
       <main className="relative min-h-screen bg-[url('/assets/1.jpg')] bg-cover bg-center text-black flex flex-col justify-center p-8">
         <div className="flex flex-col-reverse md:flex-row w-full md:w-11/12 m-auto">
           {/* Left-aligned text */}
