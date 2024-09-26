@@ -1,35 +1,55 @@
-"use client"
-import React from 'react';
-import Navigation from './components/Navigation';
+
 
 const Home: React.FC = () => {
 
   return (
-    <div className=" bg-gray-100 relative">
-      <Navigation/>
       {/* Main Content with full screen background */}
-      <main className="relative min-h-screen bg-[url('/assets/1.jpg')] bg-cover bg-center text-white flex flex-col justify-center p-8">
-        {/* Left-aligned text */}
-        <div className="text-left space-y-6 z-10 max-w-xl">
-          <h1 className="text-5xl md:text-7xl font-bold">The perfect place to start looking</h1>
-          <p className="text-xl md:text-2xl">We provide you with the best service and products.</p>
-          <button className="mt-8 px-8 py-3 bg-black text-white rounded-lg hover:bg-gray-800">
-            Watch now
-          </button>
-        </div>
+      <main className="relative min-h-screen bg-[url('/assets/1.jpg')] bg-cover bg-center text-black flex flex-col justify-center p-8">
+        <div className="flex flex-col-reverse md:flex-row w-full md:w-11/12 m-auto">
+          {/* Left-aligned text */}
+          <div className="text-left  z-10 md:w-1/2 md:p-8 pt-10 flex flex-col  mr-20">
+            <h1 className="capitalize text-4xl md:text-7xl font-bold">
+              Discover the Best <span className="text-[#B88E2F]">Power</span>{" "}
+              Solutions
+            </h1>
 
-        {/* Right banner (hidden on small screens) */}
-        <div className="hidden md:block absolute right-8 top-1/4 bg-[#B88E2F] bg-opacity-70 p-8 rounded-lg w-72 text-center z-10">
-          <h2 className="text-2xl font-semibold">Exclusive Offer</h2>
-          <p className="mt-4 text-gray-800">Get a personalized consultation now.</p>
-          <button className="mt-6 px-6 py-2 bg-black text-white rounded hover:bg-gray-800">
-            Learn More
-          </button>
-        </div>
+            <p className="leading-loose max-w-md mt-4 ">
+              Are you a skilled tasker, a trusted merchant, or a customer
+              looking for the best products and services?
+            </p>
+            <div className="flex flex-col">
+              <div className="flex">
+                <button className="mt-8 px-8 py-3 bg-[#B88E2F] text-white rounded-lg hover:bg-gray-800 mr-8">
+                  Taskers - Sign Up Now
+                </button>
+                <button className="mt-8 px-8 py-3 bg-[#B88E2F] text-white rounded-lg hover:bg-gray-80">
+                  Merchants - Join Us
+                </button>
+              </div>
 
-        {/* Bottom left banner */}
-        <div className="absolute bottom-8 left-8 bg-[#B88E2F] bg-opacity-70 p-6 rounded-lg w-72 text-left z-10">
-          <h3 className="text-xl font-semibold">Ready to make your dream home?</h3>
+              <button className="mt-8 px-8 py-3 bg-[#B88E2F] text-white rounded-lg hover:bg-gray-80">
+                Customers - Explore Our Marketplace
+              </button>
+            </div>
+          </div>
+
+          {/* Right banner (video section) */}
+          <div className="md:w-1/2  p-8 flex items-center justify-center mt-8 md:mt-0 ml-20">
+            <div className="w-full">
+              <div className="aspect-w-16 aspect-h-9">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/PQ6KAe6T7FU?si=iO48ghjfpkq_Qxge"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </div>
