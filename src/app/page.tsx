@@ -23,17 +23,23 @@ const Home: React.FC = () => {
             </p>
             <div className="flex flex-col">
               <div className="flex">
-                <button className="mt-8 px-8 py-3 bg-[#B88E2F] text-white rounded-lg hover:bg-gray-800 mr-8">
-                  Taskers - Sign Up Now
-                </button>
-                <button className="mt-8 px-8 py-3 bg-[#B88E2F] text-white rounded-lg hover:bg-gray-80">
-                  Merchants - Join Us
-                </button>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjiExUv16wIlJQjGjZpU9qo8w75g6vql3VT95SIzjFNKscIA/viewform?usp=sf_link">
+                  <button className="mt-8 px-8 py-3 bg-[#B88E2F] text-white rounded-lg hover:bg-gray-800 mr-8">
+                    Taskers - Sign Up Now
+                  </button>
+                </a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXNOrVkqPQ85PIngi7Grsx3Z1M-Hgj6NgHQ6mVfhwzpfIxdw/viewform?usp=sf_link">
+                  <button className="mt-8 px-8 py-3 bg-[#B88E2F] text-white rounded-lg hover:bg-gray-80">
+                    Merchants - Join Us
+                  </button>
+                </a>
               </div>
 
-              <button className="mt-8 px-8 py-3 bg-[#B88E2F] text-white rounded-lg hover:bg-gray-80">
-                Customers - Explore Our Marketplace
-              </button>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjzeDgHSPxd5wApJkwFfujStSG16ZJSO_EQffaGU3BjFKTGA/viewform?usp=sf_link">
+                <button className="mt-8 px-8 py-3 bg-[#B88E2F] text-white rounded-lg hover:bg-gray-80">
+                  Customers - Explore Our Marketplace
+                </button>
+              </a>
             </div>
           </div>
 
